@@ -1,0 +1,27 @@
+{
+  "cSpell.words": [
+    "bootstrapcdn",
+    "clickjacking",
+    "contenttypes",
+    "createsuperuser",
+    "endfor",
+    "isort",
+    "junstyle",
+    "linebreaksbr",
+    "makemigrations",
+    "maxcdn",
+    "mypy",
+    "pathlib",
+    "pycache",
+    "pycodestyle",
+    "pydocstyle",
+    "pyflakes",
+    "pyproject",
+    "sdist",
+    "setdefault",
+    "startapp",
+    "staticfiles",
+    "urlconf",
+    "urlpatterns"
+  ]
+}
