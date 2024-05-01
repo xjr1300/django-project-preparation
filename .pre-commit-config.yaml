@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.2 # ruffバージョン
+    hooks:
+      # リンターの実行
+      - id: ruff
+        name: lint with ruff
+      - id: ruff
+        name: sort imports with ruff
+        args: [--select, I, --fix]
+      # フォーマッターの実行
+      - id: ruff-format
+        name: format with ruff

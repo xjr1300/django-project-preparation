@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "my-project"
+version = "0.1.0"
+description = ""
+authors = ["xjr1300.04 <xjr1300.04@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.4"
+django-debug-toolbar = "^4.3.0"
+ruff = "^0.4.2"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+
+# モジュールディレクトリとテストディレクトリ
+src = ["apps", "config", "tests"]
+
+# マイグレーションディレクトリを除外
+exclude = ["migrations"]
+
+# 1行の最大文字数
+line-length = 88
+
+[tool.ruff.lint]
+
+select = [
+  "F", # pyflakes
+  "E", # pycodestyle
+  "W", # pycodestyle warnings
+  "I", # isort
+  "D", # pydocstyle
+]
+
+ignore = [
+  "D100", # undocumented-public-module
+  "D104", # undocumented-public-package
+  "D106", # undocumented-public-nested-class
+  "D212", # multi-line-summary-first-line
+  "D415", # ends-in-punctuation
+]
+
+extend-ignore = []
+
+[tool.ruff.lint.pydocstyle]
+# docstringはgoogle style
+convention = "google"

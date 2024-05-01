@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <p>投稿 `{{ object }}`を削除しますか?</p>
+    <input type="submit" value="削除" />
+  </form>
+{% endblock %}
