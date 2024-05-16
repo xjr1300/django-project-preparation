@@ -210,8 +210,9 @@ repos:
 - `config/settings.py`を次の通り変更します。
 
 ```python
++import os
  from pathlib import Path
-+from typing import List
++from typing import List, Dict
 
 # snip
 
