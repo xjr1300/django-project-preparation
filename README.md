@@ -338,7 +338,7 @@ poetry run python manage.py startapp blog apps/blog
 
 
  class BlogConfig(AppConfig):
-     """blogアプリ設定"""
++    """blogアプリ設定"""
 
      default_auto_field = "django.db.models.BigAutoField"
 -    name = "blog"
