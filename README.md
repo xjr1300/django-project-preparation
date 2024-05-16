@@ -72,7 +72,7 @@ code pyproject.toml
 # `.pre-commit-config.yaml`ファイルを作成します (内容は後述)。
 code .pre-commit-config.yaml
 # `pre-commit`を有効化
-pre-commit install
+poetry run pre-commit install
 # `my_project`ディレクトリを`config`に名前を変更します。
 mv my_project config
 # `manage.py`を編集します（内容は後述）。
