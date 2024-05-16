@@ -10,7 +10,7 @@
   - [アプリケーションの作成](#アプリケーションの作成)
   - [モデルの実装とマイグレーション](#モデルの実装とマイグレーション)
   - [スーパーユーザーの作成](#スーパーユーザーの作成)
-  - [管理サイトへの登録](#管理サイトへの登録)
+  - [管理サイトへ投稿モデルを登録](#管理サイトへ投稿モデルを登録)
   - [投稿一覧ページの表示](#投稿一覧ページの表示)
   - [スタイルシートの適用](#スタイルシートの適用)
 
@@ -414,7 +414,7 @@ Password (again):
 Superuser created successfully.
 ```
 
-## 管理サイトへの登録
+## 管理サイトへ投稿モデルを登録
 
 次の通り、`apps/blog/admin.py`ファイルを変更して、`Post`モデルを管理サイトに登録します。
 
@@ -497,6 +497,19 @@ urlpatterns: List[URLPattern] = [
     path("", views.PostListView.as_view(), name="post_list")
 ]
 ```
+
+- `config/urls.py`
+
+```python
+ urlpatterns = [
+     path("__debug__/", include("debug_toolbar.urls")),
+     path("admin/", admin.site.urls),
++    path("blog/", include("apps.blog.urls")),
+ ]
+```
+
+上記の通り実装した後、開発サーバーを起動して、管理サイトで投稿をいくつか登録してください。
+その後、`http://localhost:8000/blog/`にアクセスして、投稿がリストされることを確認してください。
 
 ## スタイルシートの適用
 
